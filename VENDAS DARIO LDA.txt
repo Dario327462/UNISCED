@@ -1,0 +1,361 @@
+  import javax.swing.JOptionPane;
+class DARIO{
+public static void main(String [] args){
+int marca,e, a,b,d,n,m,v,q,r,u,i;
+String w;
+String c=null;
+String y=null;
+String nome=null;
+
+/* OS COMANDOS ACIMA, APRESENTAM A DECLARACAO DAS VARIAVEIS
+ IMPOTACAO DO PACOTE SWING
+
+*/
+
+String[] seccao = {"VESTUÁRIO PARA HOMEMS", "VESTUÁRIO PARA MULHERES", "SAIR"};
+String[] resposta = {"SIM", "NÃO", "SAIR"};
+while (nome == null || nome.equals("")) {
+nome=JOptionPane.showInputDialog(null,"SEU NOME:", "SEU NOME",JOptionPane.INFORMATION_MESSAGE);
+
+w=JOptionPane.showInputDialog(null,"LOCALIZACAO GEOGRAFICA:", "Pais, Provincia, Cidade,Distrito, Avenida/Rua nº, Casa nº.");
+
+if (nome == null || nome.equals("")) {
+JOptionPane.showMessageDialog(null,"!!!POR FAVOR INSIRA O SEU NOME!!!\nClick OK para VOLTAR A INSERIR");
+}
+else{
+b= JOptionPane.showOptionDialog(null, "TIPO DE VESTUÁRIO", " FAÇA UMA COMPRA DE VESTUÁRIO NA LOJA VENDAS-DARIO LDA PELA INTERNET.",
+JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, seccao, seccao[0]);
+if(b==JOptionPane.YES_OPTION){
+marca=Integer.parseInt(JOptionPane.showInputDialog(null,"Insira o nº de 1 a 4, ESCOLHA O VESTUÁRIO.\n Onde:\n1-CALSAS,\n2-CALSÕES,\n3-CAMISETES,\n4-CAMISAS","Insira aqui:"));
+/* Nesta secção os numeros de 1 a 4 representa os artigos. Onde:
+1-CALSAS
+2-CALSÕES
+3-CAMISETES
+4-CAMISAS
+*/ 
+switch(marca){
+case 1: JOptionPane.showMessageDialog (null,"CALSAS\nTIPO DO MATERIAL:\nMARCA: LEVIS\nCOR: AZUL\nNUMERO: 32\nPRESSÁRIO:1500,00MT"); 
+d=JOptionPane.showOptionDialog(null, "PRETENDE COMPRAR?", "CONFIRMAÇÃO DE VENDA.",
+JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, resposta, resposta[0]);
+if(d==JOptionPane.YES_OPTION){
+while (c == null || c.equals("")) {
+c=JOptionPane.showInputDialog(null,"E-MAIL");
+if (c == null || c.equals("")) {
+JOptionPane.showMessageDialog(null,"!!!POR FAVOR INSIRA O SEU E-MEIL\nClick OK para VOLTAR A INSERIR.");
+}
+else{
+while (y == null || y.equals("")) {
+y=JOptionPane.showInputDialog(null,"NUMERO DE CONTA");
+if (y == null || y.equals("")) {
+JOptionPane.showMessageDialog(null,"!!!POR FAVOR INSIRA O SEU NUMERO DE CONTA!\nClick OK para VOLTAR A INSERIR.");
+}
+else{
+v=Integer.parseInt(JOptionPane.showInputDialog(null,"PRESSÁRIO","É: 1500"));
+if(v==1500){
+JOptionPane.showMessageDialog (null,"                                                     VENDAS-DARIO LDA\n"+"\n RECIDO"+"\nNome: "+nome+"\nE-MAIL: "+c+"\nValor pago: "+v+"Mts"+"\nProduto:\nCALSAS\n"+"COR: AZUL\nNUMERO:32\nVALOR: 1500,00MT"+"\nNote: VAI PARA A LOJA VENDAS-DARIO LDA MAIS PROXIMA PARA ADERIR O SEU PRODUTO\nLOCALIZACAO GEOGRAFICA:\n"+""+w+"\nCOMPRA EFECTUADA COM SUCESSO!!!! \n  \n \n          OBRIGADO PELA ESCOLHA,VOLTE SEMPRE!!!!!!!!!!!!!");
+}
+/* NESTA CESSAO A APLICACAO BUSCA OS DADOS INSERIDOS 
+PARA APOSTRIO APRESENTAR O RECIBO A COMPRA
+*/
+
+if(v>1500){
+JOptionPane.showMessageDialog (null,"O VALOR INTRODUSIDO ESTA ACIMA DO PRODUTO\nCOMPRA CANCELADA\nINTRODUZ O VALOR DO PRODUTO!");
+}
+if(v<1500){
+JOptionPane.showMessageDialog (null,"O VALOR INTRODUZIDO ESTA ABAIXO DO PRODUTO\nINTRODUZ O VALOR DO PRODUTO!");
+}}}}}}
+if(d==JOptionPane.NO_OPTION){
+JOptionPane.showMessageDialog (null,"CLIENTE "+nome+" OBRIGADO!! , VOLTE SEMPRE");
+}
+if(d==JOptionPane.CANCEL_OPTION){
+System.exit(0);
+}
+
+
+
+break;
+case 2: JOptionPane.showMessageDialog (null,"CALSAS\nTIPO DO MATERIAL:\nMARCA: LEVES\nCOR: AZUL\nNUMERO: 32\nPRESSARIO:500,00MT"); 
+marca=JOptionPane.showOptionDialog(null, "PRETENDE COMPRAR?", "CONFIRMAÇÃO DE VENDA.",
+JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, resposta, resposta[0]);
+if(marca==JOptionPane.YES_OPTION){
+while (c == null || c.equals("")) {
+c=JOptionPane.showInputDialog(null,"E-MAIL");
+if (c == null || c.equals("")) {
+JOptionPane.showMessageDialog(null,"!!!POR FAVOR INSIRA O SEU E-MEIL\nClick OK para VOLTAR A INSERIR.");
+}
+else{
+while (y == null || y.equals("")) {
+y=JOptionPane.showInputDialog(null,"NUMERO DE CONTA");
+if (y == null || y.equals("")) {
+JOptionPane.showMessageDialog(null,"!!!POR FAVOR INSIRA O SEU NUMERO DE CONTA!\nClick OK PARA VOLTAR A INSERIR.");
+}
+else{
+v=Integer.parseInt(JOptionPane.showInputDialog(null,"PRESSARIO","É: 500"));
+if(v==500){
+JOptionPane.showMessageDialog (null,"                                                     VENDAS-DARIO LDA\n"+"\n RECIDO"+"\nNome: "+nome+"\nE-MAIL: "+c+"\nValor pago: "+v+"Mts"+"\nProduto:\nCALSAS\n"+"COR: AZUL\nNUMERO:32\nVALOR: 500,00MT"+"\nNote: VAI PARA A LOJA VENDAS-DARIO LDA MAIS PROXIMA PARA ADERIR O SEU PRODUTO\nLOCALIZACAO GEOGRAFICA:\n"+""+w+"\nCOMPRA EFECTUADA COM SUCESSO!!!! \n  \n \n          OBRIGADO PELA ESCOLHA,VOLTE SEMPRE!!!!!!!!!!!!!");
+}
+
+/* NESTA CESSAO A APLICACAO BUSCA OS DADOS INSERIDOS 
+PARA APOSTRIO APRESENTAR O RECIBO A COMPRA
+*/
+if(v>500){
+JOptionPane.showMessageDialog (null,"O VALOR INTRODUSIDO ESTA ACIMA DO PRODUTO\nCOMPRA CANCELADA\nINTRODUZ O VALOR DO PRODUTO!");
+}
+if(v<500){
+JOptionPane.showMessageDialog (null,"O VALOR INTRODUZIDO ESTA ABAIXO DO PRODUTO\nINTRODUZ O VALOR DO PRODUTO!");
+}}}}}
+if(marca==JOptionPane.NO_OPTION){
+JOptionPane.showMessageDialog (null,"CLIENTE "+nome+" OBRIGADO!! , VOLTE SEMPRE");
+}
+if(marca==JOptionPane.CANCEL_OPTION){
+System.exit(0);
+}}
+break;
+case 3: JOptionPane.showMessageDialog (null,"CAMISETES\nTIPO DO MATERIAL:\nMARCA: POLO\nCOR: VERDE\nNUMERO L\nPRESSARIO:1000,00MT"); 
+marca=JOptionPane.showOptionDialog(null, "PRETENDE COMPRAR?", "CONFIRMAÇÃO DE VENDA.",
+JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, resposta, resposta[0]);
+if(marca==JOptionPane.YES_OPTION){
+while (c == null || c.equals("")) {
+c=JOptionPane.showInputDialog(null,"E-MAIL");
+if (c == null || c.equals("")) {
+JOptionPane.showMessageDialog(null,"!!!POR FAVOR INSIRA O SEU E-MEIL\nClick OK para VOLTAR A INSERIR.");
+}
+else{
+while (y == null || y.equals("")) {
+y=JOptionPane.showInputDialog(null,"NUMERO DE CONTA");
+if (y == null || y.equals("")) {
+JOptionPane.showMessageDialog(null,"!!!POR FAVOR INSIRA O SEU NUMERO DE CONTA!\nClick OK para VOLTAR A INSERIR.");
+}
+else{
+v=Integer.parseInt(JOptionPane.showInputDialog(null,"PRESSARIO","É: 1000"));
+if(v==1000){
+JOptionPane.showMessageDialog (null,"                                                     VENDAS-DARIO LDA\n"+"\n RECIDO"+"\nNome: "+nome+"\nE-MAIL: "+c+"\nValor pago: "+v+"Mts"+"\nProduto:\nCALSAS\n"+"COR: AZUL\nNUMERO:32\nVALOR: 1000,00MT"+"\nNote: VAI PARA A LOJA VENDAS-DARIO LDA MAIS PROXIMA PARA ADERIR O SEU PRODUTO\nLOCALIZACAO GEOGRAFICA:\n"+""+w+"\nCOMPRA EFECTUADA COM SUCESSO!!!! \n  \n \n          OBRIGADO PELA ESCOLHA,VOLTE SEMPRE!!!!!!!!!!!!!");
+}
+/* NESTA CESSAO A APLICACAO BUSCA OS DADOS INSERIDOS 
+PARA APOSTRIO APRESENTAR O RECIBO A COMPRA
+*/
+
+if(v>1000){
+JOptionPane.showMessageDialog (null,"O VALOR INTRODUSIDO ESTA ACIMA DO PRODUTO\nCOMPRA CANCELADA\nINTRODUZ O VALOR DO PRODUTO!");
+}
+if(v<1000){
+JOptionPane.showMessageDialog (null,"O VALOR INTRODUZIDO ESTA ABAIXO DO PRODUTO\nINTRODUZ O VALOR DO PRODUTO!");
+}}}}}}
+if(marca==JOptionPane.NO_OPTION){
+JOptionPane.showMessageDialog (null,"CLIENTE "+nome+" OBRIGADO!! , VOLTE SEMPRE");
+}
+if(marca==JOptionPane.CANCEL_OPTION){
+System.exit(0);
+}
+break;
+case 4: JOptionPane.showMessageDialog (null,"CAMISAS\nTIPO DO MATERIAL:\nMARCA: LACOST\nCOR: BRANCA\nNUMERO XL\nPRESSARIO:1200,00MT"); 
+marca=JOptionPane.showOptionDialog(null, "PRETENDE COMPRAR?", "CONFIRMAÇÃO DE VENDA.",
+JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, resposta, resposta[0]);
+if(marca==JOptionPane.YES_OPTION){
+while (c == null || c.equals("")) {
+c=JOptionPane.showInputDialog(null,"E-MAIL");
+if (c == null || c.equals("")) {
+JOptionPane.showMessageDialog(null,"!!!POR FAVOR INSIRA O SEU E-MEIL\nClick OK para VOLTAR A INSERIR.");
+}
+else{
+while (y == null || y.equals("")) {
+y=JOptionPane.showInputDialog(null,"NUMERO DE CONTA");
+if (y == null || y.equals("")) {
+JOptionPane.showMessageDialog(null,"!!!POR FAVOR INSIRA O SEU NUMERO DE CONTA!\nClick OK para VOLTAR A INSERIR.");
+}
+else{
+v=Integer.parseInt(JOptionPane.showInputDialog(null,"PRESSARIO","É: 1200"));
+if(v==1200){
+JOptionPane.showMessageDialog (null,"                                                     VENDAS-DARIO LDA\n"+"\n RECIDO"+"\nNome: "+nome+"\nE-MAIL: "+c+"\nValor pago: "+v+"Mts"+"\nProduto:\nCALSAS\n"+"COR: AZUL\nNUMERO:32\nVALOR: 1200,00MT"+"\nNote: VAI PARA A LOJA VENDAS-CASSAMO LDA MAIS PROXIMA PARA ADERIR O SEU PRODUTO\nLOCALIZACAO GEOGRAFICA:\n"+""+w+"\nCOMPRA EFECTUADA COM SUCESSO!!!! \n  \n \n          OBRIGADO PELA ESCOLHA,VOLTE SEMPRE!!!!!!!!!!!!!");
+}
+/* NESTA CESSAO A APLICACAO BUSCA OS DADOS INSERIDOS 
+PARA APOSTRIO APRESENTAR O RECIBO A COMPRA
+*/
+
+if(v>1200){
+JOptionPane.showMessageDialog (null,"O VALOR INTRODUSIDO ESTA ACIMA DO PRODUTO\nCOMPRA CANCELADA\nINTRODUZ O VALOR DO PRODUTO!");
+}
+if(v<1200){
+JOptionPane.showMessageDialog (null,"O VALOR INTRODUZIDO ESTA ABAIXO DO PRODUTO\nINTRODUZ O VALOR DO PRODUTO!");
+}}}}}}
+if(marca==JOptionPane.NO_OPTION){
+JOptionPane.showMessageDialog (null,"CLIENTE "+nome+" OBRIGADO!! , VOLTE SEMPRE");
+}
+if(marca==JOptionPane.CANCEL_OPTION){
+System.exit(0);
+}
+break;
+default: JOptionPane.showMessageDialog (null,"INTRODUZIU nº "+marca+" QUE NAO CORESPONDE A NENHUM VESTUARIO, por favor digite nºs de 1 a 4.");
+}}
+/* RETORNO DA SECCAO ENQUANTO O DADO INSERIDO NAO CORRESPONDER COM OS 
+NUMERO DE 1 A 4
+*/
+
+if(b==JOptionPane.NO_OPTION){
+marca=Integer.parseInt(JOptionPane.showInputDialog(null,"Insira o nº de 1 a 4, correspondente os artigos que deseja.\nOnde:\n1-VESTIDOS,\n2-SAIAS,\n3-BLUSAS,\n4-CALSINHAS","Insira aqui:"));
+/* Nesta seccao os numeros de 1 a 4 representa os artigos. Onde:
+1-VESTIDOS
+2-SAIAS
+3-BLUSAS
+4-CALSINHAS
+*/
+switch(marca){
+case 1: JOptionPane.showMessageDialog (null,"VESTIDOS\nTIPO DO MATERIAL:\nCOR: AZUL, VERDE, LARANJA, PRETO,\nALTURA 1,30m\nPRESSARIO:1750,00MT"); 
+d=JOptionPane.showOptionDialog(null, "PRETENDE COMPRAR?", "CONFIRMAÇÃO DE VENDA.",
+JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, resposta, resposta[0]);
+if(d==JOptionPane.YES_OPTION){
+while (c == null || c.equals("")) {
+c=JOptionPane.showInputDialog(null,"E-MAIL");
+if (c == null || c.equals("")) {
+JOptionPane.showMessageDialog(null,"!!!POR FAVOR INSIRA O SEU E-MEIL\nClick OK para VOLTAR A INSERIR.");
+}
+else{
+while (y == null || y.equals("")) {
+y=JOptionPane.showInputDialog(null,"NUMERO DE CONTA");
+if (y == null || y.equals("")) {
+JOptionPane.showMessageDialog(null,"!!!POR FAVOR INSIRA O SEU NUMERO DE CONTA!\nClick OK para VOLTAR A INSERIR.");
+}
+else{
+v=Integer.parseInt(JOptionPane.showInputDialog(null,"PRESSÁRIO","É 1750"));
+if(v==1750){
+JOptionPane.showMessageDialog (null,"                                                     VENDAS-DARIO LDA\n"+"\n RECIDO"+"\nNome: "+nome+"\nE-MAIL: "+c+"\nValor pago: "+v+"Mts"+"\nProduto:\nCALSAS\n"+"COR: AZUL\nNUMERO:32\nVALOR: 1750,00MT"+"\nNote: VAI PARA A LOJA VENDAS-DARIO LDA MAIS PROXIMA PARA ADERIR O SEU PRODUTO\nLOCALIZACAO GEOGRAFICA:\n"+""+w+"\n                    COMPRA EFECTUADA COM SUCESSO!!!! \n  \n \n          OBRIGADO PELA ESCOLHA,VOLTE SEMPRE!!!!!!!!!!!!!");
+}
+/* NESTA CESSAO A APLICACAO BUSCA OS DADOS INSERIDOS 
+PARA APOSTRIO APRESENTAR O RECIBO A COMPRA
+*/
+
+if(v>1750){
+JOptionPane.showMessageDialog (null,"O VALOR INTRODUSIDO ESTA ACIMA DO PRODUTO\nCOMPRA CANCELADA\nINTRODUZ O VALOR DO PRODUTO!");
+}
+if(v<1750){
+JOptionPane.showMessageDialog (null,"O VALOR INTRODUZIDO ESTA ABAIXO DO PRODUTO\nINTRODUZ O VALOR DO PRODUTO!");
+}}}}}}
+if(d==JOptionPane.NO_OPTION){
+JOptionPane.showMessageDialog (null,"CLIENTE "+nome+" OBRIGADO!! , VOLTE SEMPRE");
+}
+if(d==JOptionPane.CANCEL_OPTION){
+System.exit(0);
+}
+break;
+case 2: JOptionPane.showMessageDialog (null,"SAIAS\nTIPO DO MATERIAL:\nCOR: AZUL, VERDE, LARANJA, PRETO,\nNUMERO 30,0 cm\nPRESSÁRIO:500,00MT"); 
+marca=JOptionPane.showOptionDialog(null, "PRETENDE COMPRAR?", "CONFIRMACAO DE VENDA.",
+JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, resposta, resposta[0]);
+if(marca==JOptionPane.YES_OPTION){
+while (c == null || c.equals("")) {
+c=JOptionPane.showInputDialog(null,"E-MAIL");
+if (c == null || c.equals("")) {
+JOptionPane.showMessageDialog(null,"!!!POR FAVOR INSIRA O SEU E-MEIL\nClick OK para VOLTAR A INSERIR.");
+}
+else{
+while (y == null || y.equals("")) {
+y=JOptionPane.showInputDialog(null,"NUMERO DE CONTA");
+if (y == null || y.equals("")) {
+JOptionPane.showMessageDialog(null,"!!!POR FAVOR INSIRA O SEU NUMERO DE CONTA!\nClick OK para VOLTAR A INSERIR.");
+}
+else{
+v=Integer.parseInt(JOptionPane.showInputDialog(null,"PRESSÁRIO","É:500"));
+if(v==500){
+JOptionPane.showMessageDialog (null,"                                                     VENDAS-DARIO LDA\n"+"\n RECIDO"+"\nNome: "+nome+"\nE-MAIL: "+c+"\nValor pago: "+v+"Mts"+"\nProduto:\nCALSAS\n"+"COR: AZUL\nNUMERO:32\nVALOR: 500,00MT"+"\nNote: VAI PARA A LOJA VENDAS-CASSAMO LDA MAIS PROXIMA PARA ADERIR O SEU PRODUTO\nLOCALIZACAO GEOGRAFICA:\n"+""+w+"\nCOMPRA EFECTUADA COM SUCESSO!!!! \n  \n \n          OBRIGADO PELA ESCOLHA,VOLTE SEMPRE!!!!!!!!!!!!!");
+}
+if(v>500){
+JOptionPane.showMessageDialog (null,"O VALOR INTRODUSIDO ESTA ACIMA DO PRODUTO\nCOMPRA CANCELADA\nINTRODUZ O VALOR DO PRODUTO!");
+}
+if(v<500){
+JOptionPane.showMessageDialog (null,"O VALOR INTRODUZIDO ESTA ABAIXO DO PRODUTO\nINTRODUZ O VALOR DO PRODUTO!");
+}}}}}
+if(marca==JOptionPane.NO_OPTION){
+JOptionPane.showMessageDialog (null,"CLIENTE "+nome+" OBRIGADO!! , VOLTE SEMPRE");
+}
+if(marca==JOptionPane.CANCEL_OPTION){
+System.exit(0);
+}}
+break;
+case 3: JOptionPane.showMessageDialog (null,"BLUSAS\nTIPO DO MATERIAL:\nMARCA: TOMMY\nCOR: AZUL, VERMELHO, BRANCO\nPRESSARIO:700,00MT"); 
+marca=JOptionPane.showOptionDialog(null, "PRETENDE COMPRAR?", "CONFIRMAÇÃO DE VENDA.",
+JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, resposta, resposta[0]);
+if(marca==JOptionPane.YES_OPTION){
+while (c == null || c.equals("")) {
+c=JOptionPane.showInputDialog(null,"E-MAIL");
+if (c == null || c.equals("")) {
+JOptionPane.showMessageDialog(null,"!!!POR FAVOR INSIRA O SEU E-MEIL\nClick OK para VOLTAR A INSERIR.");
+}
+else{
+while (y == null || y.equals("")) {
+y=JOptionPane.showInputDialog(null,"NUMERO DE CONTA");
+if (y == null || y.equals("")) {
+JOptionPane.showMessageDialog(null,"!!!POR FAVOR INSIRA O SEU NUMERO DE CONTA!\nClick OK para VOLTAR A INSERIR.");
+}
+else{
+v=Integer.parseInt(JOptionPane.showInputDialog(null,"PRESSÁRIO","É: 700"));
+if(v==700){
+JOptionPane.showMessageDialog (null,"                                                     VENDAS-DARIO LDA\n"+"\n RECIDO"+"\nNome: "+nome+"\nE-MAIL: "+c+"\nValor pago: "+v+"Mts"+"\nProduto:\nCALSAS\n"+"COR: AZUL\nNUMERO:32\nVALOR: 700,00MT"+"\nNote: VAI PARA A LOJA VENDAS-CASSAMO LDA MAIS PROXIMA PARA ADERIR O SEU PRODUTO\nLOCALIZACAO GEOGRAFICA:\n"+""+w+"\nCOMPRA EFECTUADA COM SUCESSO!!!! \n  \n \n          OBRIGADO PELA ESCOLHA,VOLTE SEMPRE!!!!!!!!!!!!!");
+}
+/* NESTA CESSAO A APLICACAO BUSCA OS DADOS INSERIDOS 
+PARA APOSTRIO APRESENTAR O RECIBO A COMPRA
+*/
+
+if(v>700){
+JOptionPane.showMessageDialog (null,"O VALOR INTRODUSIDO ESTA ACIMA DO PRODUTO\nCOMPRA CANCELADA\nINTRODUZ O VALOR DO PRODUTO!");
+}
+if(v<700){
+JOptionPane.showMessageDialog (null,"O VALOR INTRODUZIDO ESTA ABAIXO DO PRODUTO\nINTRODUZ O VALOR DO PRODUTO!");
+}}}}}}
+if(marca==JOptionPane.NO_OPTION){
+JOptionPane.showMessageDialog (null,"CLIENTE "+nome+" OBRIGADO!! , VOLTE SEMPRE");
+}
+if(marca==JOptionPane.CANCEL_OPTION){
+System.exit(0);
+}
+break;
+case 4: JOptionPane.showMessageDialog (null,"CALSINHAS\nTIPO DO MATERIAL:\nCOR: BRANCO, VERDE, AMARELO, VERMELHO, LARANJA\nPRESSÁRIO:120,00MT"); 
+marca=JOptionPane.showOptionDialog(null, "PRETENDE COMPRAR?", "CONFIRMAÇÃO DE VENDA.",
+JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, resposta, resposta[0]);
+if(marca==JOptionPane.YES_OPTION){
+while (c == null || c.equals("")) {
+c=JOptionPane.showInputDialog(null,"E-MAIL");
+if (c == null || c.equals("")) {
+JOptionPane.showMessageDialog(null,"!!!POR FAVOR INSIRA O SEU E-MEIL\nClick OK para VOLTAR A INSERIR.");
+}
+else{
+while (y == null || y.equals("")) {
+y=JOptionPane.showInputDialog(null,"NUMERO DE CONTA");
+if (y == null || y.equals("")) {
+JOptionPane.showMessageDialog(null,"!!!POR FAVOR INSIRA O SEU NUMERO DE CONTA!\nClick OK para VOLTAR A INSERIR.");
+}
+else{
+v=Integer.parseInt(JOptionPane.showInputDialog(null,"PRESSARIO","É: 120"));
+if(v==120){
+JOptionPane.showMessageDialog (null,"                                                     VENDAS-DARIO LDA\n"+"\n RECIDO"+"\nNome: "+nome+"\nE-MAIL: "+c+"\nValor pago: "+v+"Mts"+"\nProduto:\nCALSAS\n"+"COR: AZUL\nNUMERO:32\nVALOR: 120,00MT"+"\nNote: VAI PARA A LOJA VENDAS-CASSAMO LDA MAIS PROXIMA PARA ADERIR O SEU PRODUTO\nLOCALIZACAO GEOGRAFICA:\n"+""+w+"\nCOMPRA EFECTUADA COM SUCESSO!!!! \n  \n \n          OBRIGADO PELA ESCOLHA,VOLTE SEMPRE!!!!!!!!!!!!!");
+}
+
+/* NESTA CESSAO A APLICACAO BUSCA OS DADOS INSERIDOS 
+PARA APOSTRIO APRESENTAR O RECIBO A COMPRA
+*/
+if(v>120){
+JOptionPane.showMessageDialog (null,"O VALOR INTRODUSIDO ESTA ACIMA DO PRODUTO\nCOMPRA CANCELADA\nINTRODUZ O VALOR DO PRODUTO!");
+}
+if(v<120){
+JOptionPane.showMessageDialog (null,"O VALOR INTRODUZIDO ESTA ABAIXO DO PRODUTO\nINTRODUZ O VALOR DO PRODUTO!");
+}}}}}}
+
+/* NESTA CESSAO A APLICACAO BUSCA OS DADOS INSERIDOS 
+PARA APOSTRIO APRESENTAR O RECIBO A COMPRA
+*/
+
+if(marca==JOptionPane.NO_OPTION){
+JOptionPane.showMessageDialog (null,"CLIENTE "+nome+" OBRIGADO!! , VOLTE SEMPRE");
+}
+if(marca==JOptionPane.CANCEL_OPTION){
+System.exit(0);
+}
+break;
+default: JOptionPane. showMessageDialog (null,"INTRODUZIU nº "+marca+" QUE NAO CORESPONDE A NENHUM VESTUÁRIO, por favor digite nºs de 1 a 4.");
+}}
+
+/* RETORNO DA SECCAO ENQUANTO O DADO INSERIDO NAO CORRESPONDER COM OS 
+NUMERO DE 1 A 4
+*/
+if(b==JOptionPane.CANCEL_OPTION){
+System.exit(0);
+}}}}}
+
